@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>TechWave | Home</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <h2 class="logo">Tech <span class="linear">Wave</span></h2>
+    <header class="main-container">
+        <nav id="nav">
+            <h2 id="logo">Tech<span class="linear">Wave</span></h2>
             <ul id="menu">
-                <li>About</li>
-                <li>Episodes</li>
-                <li>Host</li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Episodes</a></li>
+                <li><a href="#">Host</a></li>
             </ul>
-            <button><a href="#">Subscribe</a></button>
+            <button class="btn"><a href="#">Subscribe <img src="./assets/arrowright.png" alt=""></a></button>
         </nav>
-        <section id="banner">
+        <section id="banner" class="main-container">
             <div class="hero-icons">
-                <img src="./assets/hero-circle.png" alt="linear circle">
-                <img src="./assets/microphone.png" alt="microphone icon">
                 <span class="new-badge">NEW</span>
+                <img id="icon-one" src="./assets/hero-circle.png" alt="linear circle">
+                <img id="icon-two" src="./assets/microphone.png" alt="microphone icon">
             </div>
             <div class="hero-content">
-                <h1>TechWave</h1>
-                <p>Your daily dose of tech insights, productivity hacks, and personal growth</p>
+                <h1 class="hero-title">TechWave</h1>
+                <p class="hero-description">Your daily dose of tech insights, productivity hacks, and personal growth</p>
                 <div class="hero-btn">
-                    <button><img src="./assets/spotify.png" alt="spotify icon">Listen On Spotify</button>
-                    <button><img src="./assets/message.png" alt="spotify icon">Subscribe</button>
+                    <button class="btn"><a href="#"><img src="./assets/spotify.png" alt="spotify icon">Listen On Spotify</a></button>
+                    <button class="green-btn"><a href=""><img src="./assets/message.png" alt="spotify icon">Subscribe</a></button>
                 </div>
             </div>
         </section>

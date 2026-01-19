@@ -621,6 +621,9 @@ footer .footer-menu a{
         grid-template-columns: repeat(2, 1fr);
         padding-top: 40px;
     }
+    .about-box .about-card-description {
+        line-height: normal;
+    }
     /* Why Choose Section */
     #why-choose .why-choose-box {
         grid-template-columns: 1fr;

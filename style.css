@@ -366,3 +366,47 @@ footer .footer-menu a{
     font-size: var(--fs-hero);
     text-align: center;
 }
+
+/* Responsive Design for Medium Device */
+@media screen and (max-width: 992px) {
+
+/*About Section*/
+#about .about-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/*Why Choose Section*/
+#why-choose .why-choose-box {
+    grid-template-columns: repeat(2, 1fr);
+}
+#card-01 {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+#card-02, #card-03, #card-04, #card-05 {
+    grid-column: span 1;
+}
+
+/* Host Section */
+#host .host-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+}
+
+.host-profile img {
+    width: 150px; 
+    height: auto;
+}
+
+.host-content .host-social {
+    justify-content: center; 
+}
+/* Footer Section */
+footer .footer-menu {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+}

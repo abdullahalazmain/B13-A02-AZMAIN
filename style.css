@@ -9,6 +9,7 @@
 --gradient:linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
 --text-main: #FFFFFF;
 --color-secondary: #00FF88;
+--common-padding: clamp(2.5rem, -0.312rem + 7.812vw, 7.5rem);
 
 /* Formula for Clamp Responsive: clamp ((min font size/16),((max font size - min font size)/(max screen size - min screen size) x 100)+(min font size-(min screen size x ((max font size - min font size)/(max screen size - min screen size))), Max font size ) */
 
@@ -201,7 +202,7 @@ body {
 /* About Section */
 #about{
     margin-top: 50px;
-    margin-bottom: 120px;
+    margin-bottom: var(--common-padding);
 }
 #about .about-content {
     justify-items: center;
@@ -238,8 +239,8 @@ body {
 /* Why Choose Section */
 #why-choose {
     background-color: var(--secondary-bg);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: var(--common-padding);
+    padding-bottom: var(--common-padding);
 }
 #why-choose .why-choose-box {
     display: grid;
@@ -265,8 +266,8 @@ body {
 }
 /* Featured Section */
 #featured {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: var(--common-padding);
+    padding-bottom: var(--common-padding);
 }
 
 #featured .featured-box {
@@ -305,7 +306,7 @@ body {
 }
 /* Host Section */
 #host{
-    margin-bottom: 120px;
+    margin-bottom: var(--common-padding);
 }
 #host .host-card {
     background-color: var(--card-bg);
@@ -476,7 +477,6 @@ footer .footer-menu a{
     
     #about {
         margin-top: 40px;
-        margin-bottom: 40px;
     }
     #about .about-content {
         margin-bottom: 40px;
@@ -486,10 +486,6 @@ footer .footer-menu a{
         padding-top: 40px;
     }
     /* Why Choose Section */
-    #why-choose {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
     #why-choose .why-choose-box {
         grid-template-columns: 1fr;
     }
@@ -498,18 +494,11 @@ footer .footer-menu a{
         grid-row: span 1;
     }
     /* Featured */
-    #featured {
-        padding-top: 40px;
-        padding-bottom: 60px;
-    }
     .featured-box .featured-card {
         max-width: 100%;
     }
 
     /* Host */
-    #host {
-        margin-bottom: 40px;
-    }
     #host .host-card {
         flex-direction: column;
         text-align: center;

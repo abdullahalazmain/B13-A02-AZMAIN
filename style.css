@@ -51,7 +51,6 @@ body {
 /* Common Style */
 .main-container{
     max-width: 1600px;
-    padding: 0 clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
     margin: 0 auto;
 }
 .btn {
@@ -89,8 +88,7 @@ body {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
     border-bottom: 1px solid #412567;
 }
 .logo{
@@ -135,7 +133,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 80px 0;  
+    padding: 80px clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);  
 }
 .hero-icons {
     position: relative;
@@ -208,6 +206,7 @@ body {
 #about{
     margin-top: 50px;
     margin-bottom: var(--common-padding);
+    padding: 0 clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
 }
 #about .about-content {
     justify-items: center;
@@ -245,8 +244,7 @@ body {
 /* Why Choose Section */
 #why-choose {
     background-color: var(--secondary-bg);
-    padding-top: var(--common-padding);
-    padding-bottom: var(--common-padding);
+    padding: var(--common-padding) clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
 }
 #why-choose .why-choose-box {
     display: grid;
@@ -273,8 +271,8 @@ body {
 
 /* Featured Section */
 #featured {
-    padding-top: var(--common-padding);
-    padding-bottom: var(--common-padding);
+    padding: var(--common-padding) clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
+    
 }
 
 #featured .featured-box {
@@ -315,6 +313,7 @@ body {
 /* Host Section */
 #host{
     margin-bottom: var(--common-padding);
+    padding: 0 clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
 }
 #host .host-card {
     background-color: var(--card-bg);
@@ -354,6 +353,7 @@ footer{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: var(--common-padding) clamp(1.25rem, -5.078rem + 17.578vw, 12.5rem);
     text-align: center;
 }
 .footer-logo {
@@ -460,13 +460,13 @@ footer .footer-menu a{
 
     /* Banner */
     #banner {
-            padding: 40px 0;
-            background-image: url(./assets/hero-bg.png);
-            background-repeat: no-repeat;
-            background-size: cover; 
-            background-position: center center; 
-            width: 100%;
-            min-height: 400px;
+        padding: 40px 0;
+        background-image: url(./assets/hero-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center center; 
+        width: 100%;
+        min-height: 400px;
     }
 
     .hero-icons {
@@ -511,10 +511,5 @@ footer .footer-menu a{
         flex-direction: column;
         text-align: center;
         padding: 20px;
-    }
-
-    /* Footer Section*/
-    footer {
-        padding: 60px 80px;
     }
 }

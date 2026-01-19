@@ -9,12 +9,17 @@
 <body>
     <nav id="nav" class="main-container">
         <h2 class="logo">Tech<span class="linear">Wave</span></h2>
-        <ul id="menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Episodes</a></li>
-            <li><a href="#">Host</a></li>
-        </ul>
-        <button class="btn"><a href="#">Subscribe <img src="./assets/arrowright.png" alt=""></a></button>
+        <input type="checkbox" id="menu-toggler">
+        <label for="menu-toggler" class="hamburger">
+        <img src="./assets/hamburger-menu.png" alt="Menu"> </label>
+        <div id="nav-content">
+            <ul id="menu">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Episodes</a></li>
+                <li><a href="#">Host</a></li>
+            </ul>
+            <button class="btn"><a href="#">Subscribe <img src="./assets/arrowright.png" alt=""></a></button>
+        </div>
     </nav>
     <header id="banner" class="main-container">
         <div class="hero-icons">
@@ -135,7 +140,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer class="main-container">
         <h2 class="footer-logo">Tech<span class="linear">Wave</span></h2>
         <ul class="footer-menu">
             <li><a href="#"><img src="./assets/spotify.png" alt="spotify">Spotify</a></li>

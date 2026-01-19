@@ -101,6 +101,18 @@ body {
     margin-top: 16px;
 }
 
+/* Common Animation */
+@supports (animation-timeline: view()) {
+    .why-choose-card, .featured-card {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+}
+@keyframes reveal {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /* Custom Style */
 
 /* Nav */
@@ -183,7 +195,12 @@ body {
     -webkit-text-fill-color: transparent;
     transition: 0.1s;
 }
-
+#nav-btn a img {
+    transition: transform 0.3s ease;
+}
+#nav-btn:hover a img {
+    transform: translateX(5px);
+}
 /* Header Section */
 #banner {
     background-image: url(./assets/hero-bg.png);
@@ -235,10 +252,16 @@ body {
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.6);
     border: 1.5px solid var(--color-secondary);
     animation: badgeGlow 2s infinite alternate;
+    animation: pulse 2s infinite;
 }
 @keyframes badgeGlow {
     from { box-shadow: 0 0 5px rgba(0, 255, 136, 0.4); }
     to { box-shadow: 0 0 20px rgba(0, 255, 136, 0.9); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
 }
 .hero-content {
     justify-items: center;
@@ -258,6 +281,31 @@ body {
     margin-top: 25px;
     gap: 10px;
 }
+.hero-content #hero-btn-one{
+    position: relative;
+    overflow: hidden; /* Shine বাইরে যাবে না */
+}
+
+.hero-content #hero-btn-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.hero-content #hero-btn-one:hover::before {
+    left: 100%;
+}
+
 .hero-content .green-btn{
     padding: 12px 16px;
     border: 1px solid var(--color-secondary);
@@ -265,8 +313,16 @@ body {
     font-size: var(--fs-body);
     font-weight: 600;
     background: none;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
     
 }
+.hero-content .green-btn:hover {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
 .hero-content .green-btn a{
     text-decoration: none;
     color: var(--color-secondary);
@@ -275,6 +331,12 @@ body {
     align-items: center;
     text-align: center;
     gap: 6px;
+}
+.hero-content .green-btn:hover a {
+    color: #000 !important;
+}
+.hero-content .green-btn:hover a img {
+    filter: brightness(0);
 }
 
 /* About Section */
@@ -331,6 +393,8 @@ body {
 .about-card:nth-child(2) h1 { animation-delay: 0.4s; }
 .about-card:nth-child(3) h1 { animation-delay: 0.6s; }
 .about-card:nth-child(4) h1 { animation-delay: 0.8s; }
+
+
 /* Why Choose Section */
 #why-choose {
     background-color: var(--secondary-bg);
@@ -354,6 +418,26 @@ body {
     border-radius: 40px;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
     border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.why-choose-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 40px;
+    padding: 2px;
+    background: var(--gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.why-choose-card:hover::before {
+    opacity: 1;
 }
 .why-choose-card:hover {
     transform: translateY(-10px);
@@ -366,6 +450,7 @@ body {
     font-weight: 700;
     margin-top: 18px;
 }
+
 
 /* Featured Section */
 #featured {

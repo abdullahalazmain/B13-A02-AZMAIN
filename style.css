@@ -75,6 +75,7 @@ body {
 .title{
     font-size: var(--fs-section-title);
     font-weight: 700;
+    text-align: center;
 }
 .description {
     font-size: var(--fs-body);
@@ -93,10 +94,10 @@ body {
     padding-bottom: 24px;
     border-bottom: 1px solid #412567;
 }
-#logo{
+.logo{
     font-size: var(--fs-logo);
 }
-#logo .linear {
+.linear {
     background: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
@@ -236,9 +237,6 @@ body {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-#why-choose-title {
-    text-align: center;
-}
 #why-choose .why-choose-box {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -266,9 +264,7 @@ body {
     padding-top: 120px;
     padding-bottom: 120px;
 }
-#featured #featured-title {
-    text-align: center;
-}
+
 #featured .featured-box {
     display: flex;
     margin-top: 40px;
@@ -298,6 +294,75 @@ body {
 }
 .featured-card iframe {
     width: 100%;
+    aspect-ratio: 16/9;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+
+}
+/* Host Section */
+#host{
+    margin-bottom: 120px;
+}
+#host .host-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    margin-top: 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.host-content .host-name {
+    font-size: var(--fs-logo);
+    font-weight: 700;
+}
+
+.host-content .host-social {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    gap: 10px;
+}
+.host-social .social-icon {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #533C72;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;   
+}
+
+/* Footer */
+footer{
+    background-image: url(./assets/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px;
+    text-align: center;
+}
+footer .footer-menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 32px 0;
+}
+footer .footer-menu a{
+    text-decoration: none;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+
+}
+.footer-logo {
+    font-size: var(--fs-hero);
+    text-align: center;
 }
